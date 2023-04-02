@@ -41,7 +41,22 @@ jobs:
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Connect RDP CPU 2 Core - 7GB Ram - 256 SSD.
       run: cmd /c start.bat
-    - name: Show Current Dir
+      
+    - name: Current directory
       run: dir
+    - name: Download bat file and run
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/Lintao-Zeng/WindowsRDP/master/check.bat -OutFile check.bat
+        cmd /c check.bat
+    - name: Upload file to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: C:\Program Files (x86)\Steam\steamapps\common\common.zip
+        asset_name: common.zip
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "This is my release"
+        
     - name: Successful implementation! You can close the tab now.
       run: cmd /c loop.bat
