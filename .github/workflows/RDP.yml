@@ -48,6 +48,7 @@ jobs:
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/Lintao-Zeng/WindowsRDP/master/check.bat -OutFile check.bat
         cmd /c check.bat
+        
     - name: Upload file to release
       uses: svenstaro/upload-release-action@v2
       with:
