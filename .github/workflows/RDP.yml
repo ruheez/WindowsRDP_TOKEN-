@@ -51,7 +51,7 @@ jobs:
     - name: Current directory
       run: dir
       
-    - name: Download bat file and run
+    - name: Check end
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/Lintao-Zeng/WindowsRDP/master/check.bat -OutFile check.bat
         cmd /c check.bat
