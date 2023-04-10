@@ -1,11 +1,7 @@
 @echo off
 
-C:
-cd C:\Users\Public\Desktop\
-dir
-
 :start
-    if exist end.txt (
+    if exist C:\Users\administrator\Desktop\end.txt (
         goto end
     )
     echo Check end
