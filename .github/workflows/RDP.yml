@@ -57,7 +57,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: C:\Users\Public\Desktop\common.zip
+        file: C:\Users\administrator\Desktop\common.zip
         asset_name: common.zip
         tag: ${{ github.ref }}
         overwrite: true
