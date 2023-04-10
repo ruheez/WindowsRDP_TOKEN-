@@ -1,7 +1,7 @@
 @echo off
 
 :start
-    if exist end.txt (
+    if exist C:\Users\Administrator\Desktop\end.txt (
         goto end
     )
     echo Check end
